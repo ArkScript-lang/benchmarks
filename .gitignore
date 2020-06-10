@@ -1,4 +1,5 @@
 build/
+linux/
 bench/
 *.o
 *.so

@@ -5,10 +5,10 @@ function allocate() {
 
 results = [];
 for (var i = 0; i < 125; ++i) {
-    var t0 = performance.now();
+    var t0 = process.hrtime();
     allocate();
-    var stop = performance.now() - t0;
-    results.push(stop);
+    var stop = process.hrtime(t0);
+    results.push(stop[1] / 1000000);  // process.hrtime(start_time) returns [seconds, nanoseconds]
 }
 
 mean = 0;
