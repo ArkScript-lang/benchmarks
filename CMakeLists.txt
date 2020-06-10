@@ -24,10 +24,10 @@ add_subdirectory(gbench)
 #                        Targets
 #-------------------------------------------------------
 
-function(bench_make target_file)
+function(bench_make folder target_file)
     set(targetname bench_${target_file})
 
-    add_executable(${targetname} ${target_file}.cpp)
+    add_executable(${targetname} "${folder}/${target_file}.cpp")
     target_include_directories(${targetname} PRIVATE gbench/include)
     target_link_libraries(${targetname} ArkReactor benchmark Threads::Threads)
     add_dependencies(${targetname} ArkReactor benchmark)
@@ -45,6 +45,6 @@ function(bench_make target_file)
     )
 endfunction()
 
-bench_make(vm)
-bench_make(ackermann)
-bench_make(list_alloc)
+bench_make("." vm)
+bench_make(Ackermann ackermann)
+bench_make(ListAlloc list_alloc)

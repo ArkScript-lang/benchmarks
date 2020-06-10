@@ -4,7 +4,7 @@
 static void Ackermann_3_6_ark(benchmark::State& state)
 {
     Ark::State ark_state;
-    ark_state.doFile("examples/ackermann.ark");
+    ark_state.doFile("ArkScript/examples/ackermann.ark");
     while (state.KeepRunning())
     {
         Ark::VM vm(&ark_state);
@@ -15,7 +15,7 @@ static void Ackermann_3_6_ark(benchmark::State& state)
 static void Fibo_28_ark(benchmark::State& state)
 {
     Ark::State ark_state;
-    ark_state.doFile("examples/fibo.ark");
+    ark_state.doFile("ArkScript/examples/fibo.ark");
     while (state.KeepRunning())
     {
         Ark::VM vm(&ark_state);
@@ -26,7 +26,7 @@ static void Fibo_28_ark(benchmark::State& state)
 static void List_Alloc(benchmark::State& state)
 {
     Ark::State ark_state;
-    ark_state.doFile("examples/list_alloc.ark");
+    ark_state.doFile("ArkScript/examples/list_alloc.ark");
     while (state.KeepRunning())
     {
         Ark::VM vm(&ark_state);
@@ -37,7 +37,7 @@ static void List_Alloc(benchmark::State& state)
 static void vm_boot(benchmark::State& state)
 {
     Ark::State ark_state;
-    ark_state.doFile("examples/__arkscript_cache__/fibo.arkc");
+    ark_state.doFile("ArkScript/examples/__arkscript_cache__/fibo.arkc");
     while (state.KeepRunning())
     {
         Ark::VM vm(&ark_state);
