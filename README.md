@@ -27,9 +27,9 @@ Parameters used are m=3 and n=6.
 
 | data   | ArkScript | Python    | Lua      | Ruby     | JavaScript | C++      | Java     |
 | ------ | --------- | --------- | -------- | -------- | ---------- | -------- | -------- |
-| mean   | 50.9 ms   | 15.334 ms | 4.750 ms | 4.33 ms  | 0.513 ms   | 0.152 ms | 0.152 ms |
-| median | 50.7 ms   | 13.095 ms | 4.666 ms | 4.28 ms  | 0.486 ms   | 0.144 ms | 0 ms     |
-| stddev | 1.81 ms   | 5.068 ms  | 0.253 ms | 0.170 ms | 0.132 ms   | 0.012 ms | 0.359 ms |
+| mean   | 76.2 ms   | 15.334 ms | 4.750 ms | 4.33 ms  | 0.513 ms   | 0.152 ms | 0.152 ms |
+| median | 75.8 ms   | 13.095 ms | 4.666 ms | 4.28 ms  | 0.486 ms   | 0.144 ms | 0 ms     |
+| stddev | 3.30 ms   | 5.068 ms  | 0.253 ms | 0.170 ms | 0.132 ms   | 0.012 ms | 0.359 ms |
 
 ## List allocation test
 
