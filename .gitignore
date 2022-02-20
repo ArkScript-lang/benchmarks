@@ -8,3 +8,4 @@ bench/
 *.a
 *.pyc
 __pycache__/
+__arkscript__/
