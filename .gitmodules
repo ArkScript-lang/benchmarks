@@ -1,6 +1,0 @@
-[submodule "gbench"]
-	path = gbench
-	url = https://github.com/google/benchmark.git
-[submodule "ArkScript"]
-	path = ArkScript
-	url = https://github.com/ArkScript-lang/Ark.git
