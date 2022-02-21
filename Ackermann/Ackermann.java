@@ -12,13 +12,13 @@ public class Ackermann {
     }
 
     public static void main(String args[]) {
-        long startTime = System.nanoTime() / 1000000;
+        double startTime = (double) System.nanoTime();
 
-        for (int i=0; i < 125; ++i) {
+        for (int i=0; i < 1000; ++i) {
             ack(3, 6);
         }
 
-        long stopTime = System.nanoTime() / 1000000;
-        System.out.println("Java " + ((stopTime - startTime) / 125) + " ms");
+        double stopTime = (double) System.nanoTime();
+        System.out.println("Java " + ((stopTime - startTime) / 1000000 / 1000) + " ms");
     }
 }

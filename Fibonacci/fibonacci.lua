@@ -4,13 +4,13 @@ local function fibo(n)
     end
 end
 
-local socket=require 'socket'
-
-start = socket.gettime()
-for i=1,125 do
+start_time = os.time()
+for i=1,100 do
     fibo(28)
 end
 
-mean = ((socket.gettime() - start) * 1000) / 125
+end_time = os.time()
+elapsed_time = os.difftime(end_time, start_time)
+mean = (elapsed_time * 1000) / 100
 
 print("Lua", mean, "ms")

@@ -8,9 +8,10 @@ end
 
 
 start = Time.new
-125.times do |i|
+100.times do |i|
   fibo(28)
 end
 
 stop = (Time.new - start) * 1000  # Time.new is in seconds
+mean = stop / 100
 puts("Ruby #{mean} ms")

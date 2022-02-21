@@ -13,15 +13,14 @@ unsigned ack(unsigned m, unsigned n) {
 
 int main(int argc, char **argv) {
   auto begin = std::chrono::steady_clock::now();
-  for (std::size_t i = 0; i < 125; ++i)
-    ack(3, 6);
+  unsigned acc = 0;
+  for (std::size_t i = 0; i < 1000; ++i)
+    acc += ack(3, 6);
   auto end = std::chrono::steady_clock::now();
+  auto delta = static_cast<double>(
+      std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count()) / 1000.0;
 
-  std::cout << "C++ "
-            << std::chrono::duration_cast<std::chrono::milliseconds>(end -
-                                                                     begin)
-                   .count()
-            << " ms" << std::endl;
+  std::cout << "C++ " << (delta / 1000.0) << " ms" << std::endl;
 
-  return 0;
+  return acc;
 }

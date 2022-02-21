@@ -13,9 +13,9 @@ def ack(m, n):
 
 if __name__ == '__main__':
     start = time.perf_counter()
-    for i in range(125):
+    for i in range(1000):
         ack(3, 6)
     stop = (time.perf_counter() - start) * 1000  # time.perf_counter is in seconds
 
-    mean = stop / 125
+    mean = stop / 1000
     print(f"Python {mean} ms")

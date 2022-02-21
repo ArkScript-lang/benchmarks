@@ -11,10 +11,10 @@ def ack(m, n)
 end
 
 start = Time.new
-125.times do |i|
+1000.times do |i|
   ack(3, 6)
 end
 
 stop = (Time.new - start) * 1000  # Time.new is in seconds
-mean = stop / 125
+mean = stop / 1000
 puts("Ruby #{mean} ms")
