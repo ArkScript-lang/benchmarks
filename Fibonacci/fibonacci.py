@@ -1,20 +1,18 @@
+#!/usr/bin/env python3.6
 import time
 
 
-def ack(m, n):
-    if m > 0:
-        if n == 0:
-            return ack(m - 1, 1)
-        else:
-            return ack(m - 1, ack(m, n - 1))
+def fibo(n):
+    if n < 2:
+        return n
     else:
-        return n + 1
+        return fibo(n - 1) + fibo(n - 2)
 
 
 if __name__ == '__main__':
     start = time.perf_counter()
     for i in range(125):
-        ack(3, 6)
+        fibo(28)
     stop = (time.perf_counter() - start) * 1000  # time.perf_counter is in seconds
 
     mean = stop / 125

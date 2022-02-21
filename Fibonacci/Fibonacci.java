@@ -1,13 +1,9 @@
-public class Ackermann {
-    public static int ack(int m, int n) {
-        if (m > 0) {
-            if (n == 0) {
-                return ack(m - 1, 1);
-            } else {
-                return ack(m - 1, ack(m, n - 1));
-            }
+public class Fibonacci {
+    public static int fibo(int n) {
+        if (n < 2) {
+            return n;
         } else {
-            return n + 1;
+            return fibo(n - 1) + fibo(n - 2);
         }
     }
 
@@ -15,7 +11,7 @@ public class Ackermann {
         long startTime = System.nanoTime() / 1000000;
 
         for (int i=0; i < 125; ++i) {
-            ack(3, 6);
+            fibo(28);
         }
 
         long stopTime = System.nanoTime() / 1000000;

@@ -1,19 +1,14 @@
-function ack(m, n) {
-    if (m > 0) {
-        if (n == 0) {
-            return ack(m - 1, 1);
-        } else {
-            return ack(m - 1, ack(m, n - 1));
-        }
-    } else {
-        return n + 1;
-    }
+function fibo(n) {
+    if (n < 2)
+        return n;
+    else
+        return fibo(n - 1) + fibo(n - 2);
 }
 
 var t0 = process.hrtime();
 
 for (var i = 0; i < 125; ++i) {
-    ack(3, 6);
+    fibo(28);
 }
 
 var stop = process.hrtime(t0);
