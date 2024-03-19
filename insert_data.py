@@ -28,7 +28,7 @@ def compute(path, run):
     file_hash = sha256sum(run["command"].split(" ")[-1])
     test_key = f"{test_name}-{file_hash}"
 
-    if data.get(test_key):
+    if data.get(test_key) is None:
         data[test_key] = []
     data[test_key].append({
         "date": now,
