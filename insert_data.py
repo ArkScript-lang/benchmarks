@@ -49,15 +49,15 @@ results = read_data(json_file)
 for run in results["results"]:
     command = run["command"]
     if command.startswith("build/arkscript "):
-        compute(f"{benchmarks_dir}/../../data/arkscript.json", run)
+        compute(f"{benchmarks_dir}/data/arkscript.json", run)
     elif command.startswith("lua "):
-        compute(f"{benchmarks_dir}/../../data/lua.json", run)
+        compute(f"{benchmarks_dir}/data/lua.json", run)
     elif command.startswith("node "):
-        compute(f"{benchmarks_dir}/../../data/node.json", run)
+        compute(f"{benchmarks_dir}/data/node.json", run)
     elif command.startswith("python "):
-        compute(f"{benchmarks_dir}/../../data/python.json", run)
+        compute(f"{benchmarks_dir}/data/python.json", run)
     elif command.startswith("ruby "):
-        compute(f"{benchmarks_dir}/../../data/ruby.json", run)
+        compute(f"{benchmarks_dir}/data/ruby.json", run)
     else:
         print(f"Unrecognized command: {command} -- It seems this script needs to be updated!")
         sys.exit(1)
