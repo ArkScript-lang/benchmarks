@@ -8,3 +8,4 @@ build/
 *.class
 __pycache__/
 __arkscript__/
+.idea/
