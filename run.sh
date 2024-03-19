@@ -12,7 +12,7 @@ python --version
 ruby --version
 
 file=$(mktemp)
-hyperfine --warmup 1 --runs 20 --export-json "$file" \
+hyperfine --warmup 5 --runs 20 --export-json "$file" \
   "build/arkscript $folder/arkscript.ark" \
   "lua $folder/lua.lua" \
   "node $folder/node.js" \
