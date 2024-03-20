@@ -18,5 +18,6 @@ hyperfine --warmup 5 --runs 20 --export-json "$file" \
   "node $folder/node.js" \
   "python $folder/python.py" \
   "ruby $folder/ruby.rb"
+exit_code=$?
 
-python "$script_path/insert_data.py" "$script_path" "$file" "$test_path" "$ARKSCRIPT_COMMIT"
+[[ $exit_code == 0 ]] && python "$script_path/insert_data.py" "$script_path" "$file" "$test_path" "$ARKSCRIPT_COMMIT" || exit 1
