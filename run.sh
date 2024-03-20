@@ -20,4 +20,10 @@ hyperfine --warmup 5 --runs 20 --export-json "$file" \
   "ruby $folder/ruby.rb"
 exit_code=$?
 
-[[ $exit_code == 0 ]] && python "$script_path/insert_data.py" "$script_path" "$file" "$test_path" "$ARKSCRIPT_COMMIT" || exit 1
+if [[ $exit_code == 0 ]]; then
+  python "$script_path/insert_data.py" "$script_path" "$file" "$test_path" "$ARKSCRIPT_COMMIT"
+  echo "Output files generated"
+else
+  echo "An error occurred while running hyperfine benchmarks"
+  exit 1
+fi
