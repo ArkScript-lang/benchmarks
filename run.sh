@@ -19,4 +19,4 @@ hyperfine --warmup 5 --runs 20 --export-json "$file" \
   "python $folder/python.py" \
   "ruby $folder/ruby.rb"
 
-python "$script_path/insert_data.py" "$script_path" "$file" "$test_path" "$(git log --format="%H" -n 1)"
+python "$script_path/insert_data.py" "$script_path" "$file" "$test_path" "$ARKSCRIPT_COMMIT"
