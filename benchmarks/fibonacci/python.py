@@ -1,7 +1,4 @@
 #!/usr/bin/env python3.6
-import time
-
-
 def fibo(n):
     if n < 2:
         return n
@@ -10,10 +7,4 @@ def fibo(n):
 
 
 if __name__ == '__main__':
-    start = time.perf_counter()
-    for i in range(100):
-        fibo(28)
-    stop = (time.perf_counter() - start) * 1000  # time.perf_counter is in seconds
-
-    mean = stop / 100
-    print(f"Python {mean} ms")
+    fibo(28)
