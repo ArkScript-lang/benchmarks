@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import os
 import sys
 import json
 import hashlib
@@ -19,8 +19,11 @@ def sha256sum(filename):
 
 
 def read_data(path):
-    with open(path) as f:
-        return json.load(f)
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    else:
+        return {}
 
 
 def compute(path, run):

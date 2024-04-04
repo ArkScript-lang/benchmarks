@@ -4,4 +4,4 @@ fibRec = Fn.new { |n|
     return fibRec.call(n-1) + fibRec.call(n-2)
 }
 
-fibRec(28)
+fibRec.call(28)
