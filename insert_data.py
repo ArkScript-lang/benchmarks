@@ -58,6 +58,8 @@ for run in results["results"]:
         compute(f"{benchmarks_dir}/data/python.json", run)
     elif command.startswith("ruby "):
         compute(f"{benchmarks_dir}/data/ruby.json", run)
+    elif command.startswith("./wren_cli "):
+        compute(f"{benchmarks_dir}/data/wren.json", run)
     else:
         print(f"Unrecognized command: {command} -- It seems this script needs to be updated!")
         sys.exit(1)

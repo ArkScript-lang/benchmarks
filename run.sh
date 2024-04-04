@@ -17,7 +17,8 @@ hyperfine --warmup 5 --runs 20 --export-json "$file" \
   "lua $folder/lua.lua" \
   "node $folder/node.js" \
   "python $folder/python.py" \
-  "ruby $folder/ruby.rb"
+  "ruby $folder/ruby.rb" \
+  "./wren_cli $folder/wren.wren"
 exit_code=$?
 
 if [[ $exit_code == 0 ]]; then

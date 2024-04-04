@@ -9,6 +9,7 @@ The content of this repository is automatically updated each time a new commit l
 - NodeJS: 18
 - Python: 3.11
 - Ruby: 3.3
+- Wren: 0.4.0
 
 ## Basic workflow
 
