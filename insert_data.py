@@ -44,6 +44,8 @@ def compute(path, run):
     if "arkscript" in run["command"]:
         data[test_key][-1]["commit"] = arkscript_commit_id
 
+    if not os.path.exists(path):
+        os.mkdir(os.path.dirname(path))
     with open(path, "w") as f:
         json.dump(data, f)
 
