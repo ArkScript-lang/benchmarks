@@ -10,6 +10,7 @@ lua -v
 echo node $(node --version)
 python --version
 ruby --version
+./wren_cli --version
 
 file=$(mktemp)
 hyperfine --warmup 5 --runs 20 --export-json "$file" \
