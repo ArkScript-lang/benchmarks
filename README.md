@@ -2,6 +2,8 @@
 
 The content of this repository is automatically updated each time a new commit land to the `dev` branch of [ArkScript](https://github.com/ArkScript-lang/Ark) (see [this workflow](https://github.com/ArkScript-lang/Ark/blob/dev/.github/workflows/benchmarks.yml) to learn how it works).
 
+Some benchmarks come from [wren benchmarks](https://github.com/wren-lang/wren/blob/main/test/benchmark).
+
 ## Languages used versions
 
 - ArkScript: latest
