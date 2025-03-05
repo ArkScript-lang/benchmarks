@@ -9,3 +9,4 @@ build/
 __pycache__/
 __arkscript__/
 .idea/
+.DS_Store
