@@ -1,0 +1,12 @@
+(let rounds 10000003)
+(mut x 1.0)
+(mut pi 1.0)
+
+(mut i 2)
+(while (< i rounds) {
+  (set x (* -1 x))
+  (set pi (+ pi (/ x (- (* 2 i) 1))))
+  (set i (+ 1 i)) })
+
+(set pi (* pi 4))
+(print (format "{:.16}" pi))

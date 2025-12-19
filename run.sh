@@ -5,9 +5,9 @@ test_path=$1
 folder="$script_path/benchmarks/$test_path"
 
 hyperfine --version
-echo arkscript $(build/arkscript --version)
+echo arkscript "$(build/arkscript --version)"
 lua -v
-echo node $(node --version)
+echo node "$(node --version)"
 python --version
 ruby --version
 ./wren_cli --version
