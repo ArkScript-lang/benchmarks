@@ -8,4 +8,4 @@ for (i in 2...(rounds+3)) {
 }
 
 pi = pi * 4
-System.print(string.format("%.16f", pi))
+System.print(pi)
